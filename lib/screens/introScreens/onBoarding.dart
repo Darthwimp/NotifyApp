@@ -15,6 +15,11 @@ class onBoarding extends StatefulWidget {
 class _onBoardingState extends State<onBoarding> {
   PageController _controller = PageController();
   bool onLastPage = false;
+  bool onSecondLastPage = false;
+  Text nextText = const Text(
+    "Next",
+    style: TextStyle(fontSize: 18),
+  );
 
   @override
   Widget build(BuildContext context) {
@@ -38,6 +43,7 @@ class _onBoardingState extends State<onBoarding> {
               controller: _controller,
               onPageChanged: (index) {
                 onLastPage = (index == 2);
+                onSecondLastPage = (index == 1);
               },
               children: const [
                 Screen1(),
@@ -62,32 +68,36 @@ class _onBoardingState extends State<onBoarding> {
                   Padding(
                     padding: const EdgeInsets.all(50.0),
                     child: ElevatedButton(
-                      style: ElevatedButton.styleFrom(
-                        backgroundColor: Colors.deepPurple.shade800,
-                        padding: const EdgeInsets.only(
-                            left: 110, right: 110, top: 15, bottom: 15),
-                      ),
-                      onPressed: () {
-                        _controller.nextPage(
-                          duration: const Duration(milliseconds: 200),
-                          curve: Curves.easeIn,
-                        );
-                        if (onLastPage) {
-                          Navigator.pushReplacement(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) {
-                                return Register_screen();
-                              },
-                            ),
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.deepPurple.shade800,
+                          padding: const EdgeInsets.only(
+                              left: 110, right: 110, top: 15, bottom: 15),
+                        ),
+                        onPressed: () {
+                          _controller.nextPage(
+                            duration: const Duration(milliseconds: 200),
+                            curve: Curves.easeIn,
                           );
-                        }
-                      },
-                      child: const Text(
-                        "Next",
-                        style: TextStyle(fontSize: 18),
-                      ),
-                    ),
+                          if (onLastPage) {
+                            Navigator.pushReplacement(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) {
+                                  return Register_screen();
+                                },
+                              ),
+                            );
+                          }
+                          if (onSecondLastPage) {
+                            setState(() {
+                              nextText = const Text(
+                                "Get Started? :)",
+                                style: TextStyle(fontSize: 14),
+                              );
+                            });
+                          }
+                        },
+                        child: nextText),
                   )
                 ],
               ),
