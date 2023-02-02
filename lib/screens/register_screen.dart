@@ -59,7 +59,7 @@ class Register_screen extends StatelessWidget {
                     Padding(
                       padding: const EdgeInsets.only(left: 35.0, right: 35.0),
                       child: TextField(
-                        style: TextStyle(color: Colors.white70),
+                        style: const TextStyle(color: Colors.white70),
                         controller: emailController,
                         decoration: const InputDecoration(
                             filled: true,
@@ -77,7 +77,7 @@ class Register_screen extends StatelessWidget {
                     Padding(
                       padding: const EdgeInsets.only(left: 35.0, right: 35.0),
                       child: TextField(
-                        style: TextStyle(color: Colors.white70),
+                        style: const TextStyle(color: Colors.white70),
                         obscureText: true,
                         controller: passwordController,
                         decoration: const InputDecoration(
@@ -96,7 +96,7 @@ class Register_screen extends StatelessWidget {
                     Padding(
                       padding: const EdgeInsets.only(left: 35.0, right: 35.0),
                       child: TextField(
-                        style: TextStyle(color: Colors.white70),
+                        style: const TextStyle(color: Colors.white70),
                         obscureText: true,
                         controller: confirmpasswordController,
                         // ignore: prefer_const_constructors
@@ -104,7 +104,7 @@ class Register_screen extends StatelessWidget {
                             filled: true,
                             fillColor: Colors.black26,
                             labelText: "CONFIRM PASSWORD",
-                            labelStyle: TextStyle(
+                            labelStyle: const TextStyle(
                               color: Colors.grey,
                               fontSize: 15,
                             )),
@@ -181,10 +181,10 @@ class Register_screen extends StatelessWidget {
                           ),
                         );
                       },
-                      child: Padding(
-                        padding: const EdgeInsets.only(
+                      child: const Padding(
+                        padding: EdgeInsets.only(
                             top: 30.0, left: 50.0, right: 10.0),
-                        child: const Text(
+                        child: Text(
                           'Already have an account? Sign In',
                           style: TextStyle(
                             color: Colors.grey,

@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:my_app/constant/info.dart';
 import 'package:my_app/constant/styles.dart';
+import 'package:my_app/screens/subInputPage.dart';
 
 class subAdd extends StatelessWidget {
   const subAdd({super.key});
@@ -19,14 +20,13 @@ class subAdd extends StatelessWidget {
       ),
       body: Container(
         decoration: homePageDecor,
-        child: Padding(
-          padding: const EdgeInsets.only(top: 28.0),
-          child: SafeArea(
+        child: SafeArea(
+          child: InkWell(
             child: ListView.builder(
               itemCount: subInfo.length,
               itemBuilder: (context, index) {
                 return Padding(
-                  padding: const EdgeInsets.all(20.0),
+                  padding: const EdgeInsets.all(8.0),
                   child: GestureDetector(
                     child: ListTile(
                       leading: Image(
@@ -34,10 +34,19 @@ class subAdd extends StatelessWidget {
                               subInfo[index]["location"].toString())),
                       title: Text(
                         subInfo[index]["name"].toString(),
-                        style: TextStyle(color: Colors.white, fontSize: 20),
+
+                        style: homePageText1,
                       ),
                       tileColor: tiles[index],
-                      onTap: () {},
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => subInputPage(),
+                          ),
+                        );
+                      },
+
                     ),
                   ),
                 );

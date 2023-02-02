@@ -61,4 +61,8 @@ class Authservice {
       print(e.toString());
     }
   }
+  Future signOut() async {
+    await GoogleSignIn().signOut();
+    await firebaseAuth.signOut();
+  }
 }

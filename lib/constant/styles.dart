@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:my_app/sevices/auth_services.dart';
 
 TextStyle introPageStyle = const TextStyle(color: Colors.white, fontSize: 20);
 TextStyle appHead = const TextStyle(
@@ -66,10 +67,15 @@ Row homePageText = Row(
     const SizedBox(
       width: 130,
     ),
-    const Icon(
-      Icons.logout_rounded,
-      size: 30,
-      color: Colors.white,
+    IconButton(
+      icon: const Icon(
+        Icons.logout,
+        size: 40,
+        color: Colors.white,
+      ),
+      onPressed: () async {
+        await Authservice().signOut();
+      },
     )
   ],
 );

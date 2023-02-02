@@ -171,7 +171,7 @@ class _LogInState extends State<LogIn> {
                             child: Container(
                               height: 50.0,
                               width: 330.0,
-                              child: SignInButton(Buttons.GoogleDark,
+                              child: SignInButton(Buttons.Google, 
                                   onPressed: () async {
                                 setState(() {
                                   loading == true;
