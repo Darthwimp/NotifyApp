@@ -56,7 +56,9 @@ List<Color> tiles = [
 Row homePageText = Row(
   mainAxisAlignment: MainAxisAlignment.start,
   children: [
-    const SizedBox(width: 20,),
+    const SizedBox(
+      width: 20,
+    ),
     Text(
       "Username!",
       style: homePageText2,
@@ -66,7 +68,7 @@ Row homePageText = Row(
     ),
     const Icon(
       Icons.logout_rounded,
-      size: 40,
+      size: 20,
       color: Colors.white,
     )
   ],
