@@ -1,7 +1,6 @@
 // ignore_for_file: camel_case_types
 
 import 'package:flutter/material.dart';
-
 import 'package:my_app/constant/info.dart';
 import 'package:my_app/constant/styles.dart';
 import 'package:my_app/screens/subInputPage.dart';
@@ -12,6 +11,13 @@ class subAdd extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: Text(
+          "Choose your subscription",
+        ),
+        backgroundColor: Colors.black87,
+        elevation: 0.0,
+      ),
       body: Container(
         decoration: homePageDecor,
         child: SafeArea(
@@ -28,6 +34,7 @@ class subAdd extends StatelessWidget {
                               subInfo[index]["location"].toString())),
                       title: Text(
                         subInfo[index]["name"].toString(),
+
                         style: homePageText1,
                       ),
                       tileColor: tiles[index],
@@ -39,6 +46,7 @@ class subAdd extends StatelessWidget {
                           ),
                         );
                       },
+
                     ),
                   ),
                 );

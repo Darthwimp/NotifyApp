@@ -65,7 +65,7 @@ Row homePageText = Row(
       style: homePageText2,
     ),
     const SizedBox(
-      width: 120,
+      width: 130,
     ),
     IconButton(
       icon: const Icon(

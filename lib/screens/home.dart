@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:my_app/constant/styles.dart';
 import 'package:my_app/screens/subAdd.dart';
-import 'package:my_app/screens/sign-in.dart';
 
 class home_page extends StatefulWidget {
   const home_page({super.key});
@@ -20,28 +19,34 @@ class _home_pageState extends State<home_page> {
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
             const SizedBox(
-              height: 30,
+              height: 80,
             ),
             homePageText,
           ],
         ),
       ),
-      floatingActionButton: FloatingActionButton.extended(
-        onPressed: () {
-          Navigator.push(
-            context,
-            MaterialPageRoute(builder: (context) => subAdd()),
-          );
-        },
-        icon: const Icon(
-          Icons.add,
-          size: 30,
+      floatingActionButton: Padding(
+        padding: const EdgeInsets.only(bottom: 38.0),
+        child: FloatingActionButton.extended(
+          onPressed: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => subAdd()),
+            );
+          },
+          icon: Padding(
+            padding: const EdgeInsets.only(left: 8.0, top: 18.0, bottom: 18.0),
+            child: const Icon(
+              Icons.add,
+              size: 25,
+            ),
+          ),
+          label: Text(
+            "Add",
+            style: homePageText1,
+          ),
+          backgroundColor: Colors.black45,
         ),
-        label: Text(
-          "Add more?",
-          style: homePageText1,
-        ),
-        backgroundColor: primary,
       ),
     );
   }
