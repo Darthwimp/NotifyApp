@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:my_app/sevices/auth_services.dart';
 
 TextStyle introPageStyle = const TextStyle(color: Colors.white, fontSize: 20);
 TextStyle appHead = const TextStyle(
@@ -56,7 +57,9 @@ List<Color> tiles = [
 Row homePageText = Row(
   mainAxisAlignment: MainAxisAlignment.start,
   children: [
-    const SizedBox(width: 20,),
+    const SizedBox(
+      width: 20,
+    ),
     Text(
       "Username!",
       style: homePageText2,
@@ -64,10 +67,15 @@ Row homePageText = Row(
     const SizedBox(
       width: 120,
     ),
-    const Icon(
-      Icons.logout_rounded,
-      size: 40,
-      color: Colors.white,
+    IconButton(
+      icon: const Icon(
+        Icons.logout,
+        size: 40,
+        color: Colors.white,
+      ),
+      onPressed: () async {
+        await Authservice().signOut();
+      },
     )
   ],
 );
