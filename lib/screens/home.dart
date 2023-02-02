@@ -26,7 +26,7 @@ class _home_pageState extends State<home_page> {
         ),
       ),
       floatingActionButton: Padding(
-        padding: const EdgeInsets.only(bottom: 28.0),
+        padding: const EdgeInsets.only(bottom: 38.0),
         child: FloatingActionButton.extended(
           onPressed: () {
             Navigator.push(
@@ -41,7 +41,10 @@ class _home_pageState extends State<home_page> {
               size: 25,
             ),
           ),
-          label: Text(""),
+          label: Text(
+            "Add",
+            style: homePageText1,
+          ),
           backgroundColor: Colors.black45,
         ),
       ),
