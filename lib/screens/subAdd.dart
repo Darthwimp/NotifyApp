@@ -11,22 +11,22 @@ class subAdd extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-          title: Image.asset('assets/appbar.png', fit: BoxFit.cover),
-          backgroundColor: Colors.black),
       body: Container(
-        decoration: mainPageDecor,
+        decoration: homePageDecor,
         child: SafeArea(
           child: ListView.builder(
             itemCount: subInfo.length,
             itemBuilder: (context, index) {
-              return GestureDetector(
-                child: ListTile(
-                  leading: Image(
-                      image: AssetImage(subInfo[index]["location"].toString())),
-                  title: Text(subInfo[index]["name"].toString()),
-                  tileColor: tiles[index],
-                  onTap: () {},
+              return Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: GestureDetector(
+                  child: ListTile(
+                    leading: Image(
+                        image: AssetImage(subInfo[index]["location"].toString())),
+                    title: Text(subInfo[index]["name"].toString(), style: homePageText1,),
+                    tileColor: tiles[index],
+                    onTap: () {},
+                  ),
                 ),
               );
             },
