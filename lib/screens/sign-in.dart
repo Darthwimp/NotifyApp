@@ -28,10 +28,12 @@ class _LogInState extends State<LogIn> {
       resizeToAvoidBottomInset: false,
       appBar: AppBar(
         title: Padding(
-          padding: const EdgeInsets.only(top: 30.0, left: 60.0, bottom: 30.0),
-          child: Image.asset(
-            'assets/Notify-screens.png',
-            height: 150,
+          padding: const EdgeInsets.only(top: 30.0, right: 55.0, bottom: 30.0),
+          child: Center(
+            child: Image.asset(
+              'assets/Notify-screens.png',
+              height: 150,
+            ),
           ),
         ),
         backgroundColor: Colors.black87,
@@ -171,7 +173,7 @@ class _LogInState extends State<LogIn> {
                             child: Container(
                               height: 50.0,
                               width: 330.0,
-                              child: SignInButton(Buttons.Google, 
+                              child: SignInButton(Buttons.Google,
                                   onPressed: () async {
                                 setState(() {
                                   loading == true;

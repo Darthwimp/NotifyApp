@@ -1,7 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:flutter/material.dart';
 import 'package:const_date_time/const_date_time.dart';
-
+import 'package:flutter/material.dart';
 import 'package:my_app/constant/styles.dart';
 import 'package:my_app/screens/subAdd.dart';
 
@@ -11,8 +10,6 @@ class home_page extends StatefulWidget {
 }
 
 class _home_pageState extends State<home_page> {
-
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -53,8 +50,11 @@ class _home_pageState extends State<home_page> {
                                 ),
                               ),
                               child: const ListTile(
-                                leading: Text("Ends in:", style: TextStyle(color: Colors.white, fontSize: 16),)
-                              ),
+                                  leading: Text(
+                                "Ends in:",
+                                style: TextStyle(
+                                    color: Colors.white, fontSize: 16),
+                              )),
                             ),
                           ),
                         );

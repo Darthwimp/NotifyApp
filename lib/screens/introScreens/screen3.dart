@@ -38,7 +38,7 @@ class Screen3 extends StatelessWidget {
           ),
           Expanded(
             child: Padding(
-              padding: const EdgeInsets.only(bottom: 35, left: 35, right: 35),
+              padding: const EdgeInsets.only(bottom: 35, left: 20, right: 20),
               child: Text(
                 "Get the latest updates for your OTT platforms",
                 style: introPageStyle,

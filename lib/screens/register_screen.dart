@@ -20,10 +20,12 @@ class Register_screen extends StatelessWidget {
       resizeToAvoidBottomInset: false,
       appBar: AppBar(
         title: Padding(
-          padding: const EdgeInsets.only(top: 30.0, left: 120.0, bottom: 30.0),
-          child: Image.asset(
-            'assets/Notify-screens.png',
-            height: 150,
+          padding: const EdgeInsets.only(top: 30.0, bottom: 30.0),
+          child: Center(
+            child: Image.asset(
+              'assets/Notify-screens.png',
+              height: 150,
+            ),
           ),
         ),
         backgroundColor: Colors.black87,
@@ -182,8 +184,8 @@ class Register_screen extends StatelessWidget {
                         );
                       },
                       child: const Padding(
-                        padding: EdgeInsets.only(
-                            top: 30.0, left: 50.0, right: 10.0),
+                        padding:
+                            EdgeInsets.only(top: 30.0, left: 50.0, right: 10.0),
                         child: Text(
                           'Already have an account? Sign In',
                           style: TextStyle(

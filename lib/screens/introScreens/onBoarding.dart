@@ -27,11 +27,12 @@ class _onBoardingState extends State<onBoarding> {
       child: Scaffold(
         appBar: AppBar(
           title: Padding(
-            padding:
-                const EdgeInsets.only(top: 40.0, left: 120.0, bottom: 20.0),
-            child: Image.asset(
-              'assets/Notify-screens.png',
-              height: 150,
+            padding: const EdgeInsets.only(top: 40.0, bottom: 20.0),
+            child: Center(
+              child: Image.asset(
+                'assets/Notify-screens.png',
+                height: 150,
+              ),
             ),
           ),
           backgroundColor: Colors.black87,

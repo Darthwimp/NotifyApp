@@ -12,8 +12,12 @@ class subAdd extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(
-          "Choose your subscription",
+        title: Padding(
+          padding: const EdgeInsets.only(top: 18.0, bottom: 18.0),
+          child: Text(
+            "Choose your subscription",
+            style: TextStyle(fontWeight: FontWeight.w400),
+          ),
         ),
         backgroundColor: Colors.black87,
         elevation: 0.0,
@@ -26,7 +30,7 @@ class subAdd extends StatelessWidget {
               itemCount: subInfo.length,
               itemBuilder: (context, index) {
                 return Padding(
-                  padding: const EdgeInsets.all(8.0),
+                  padding: const EdgeInsets.all(20.0),
                   child: GestureDetector(
                     child: ListTile(
                       leading: Image(
@@ -34,7 +38,6 @@ class subAdd extends StatelessWidget {
                               subInfo[index]["location"].toString())),
                       title: Text(
                         subInfo[index]["name"].toString(),
-
                         style: homePageText1,
                       ),
                       tileColor: tiles[index],
@@ -46,7 +49,6 @@ class subAdd extends StatelessWidget {
                           ),
                         );
                       },
-
                     ),
                   ),
                 );
