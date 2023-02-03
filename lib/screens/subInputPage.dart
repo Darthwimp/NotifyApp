@@ -32,12 +32,19 @@ class subInputPage extends StatelessWidget {
             children: [
               TextField(
                 controller: duratiion,
+                style: const TextStyle(color: Colors.white70),
                 keyboardType: TextInputType.number,
+                decoration: const InputDecoration(
+                  labelText: "Enter your duration",
+                  fillColor: Colors.white,
+                  labelStyle: TextStyle(color: Colors.white,)
+                ),
                 inputFormatters: <TextInputFormatter>[
                   FilteringTextInputFormatter.digitsOnly
                 ],
               ),
               ElevatedButton(
+                style: ElevatedButton.styleFrom(backgroundColor: Colors.pink.shade900),
                 onPressed: () async {
                   Map<String, dynamic> data = {
                     "Service-Name": subInfo[idx]["name"].toString(),

@@ -62,7 +62,7 @@ SafeArea homePageText = SafeArea(
         width: 20,
       ),
       Text(
-        "Username!",
+        "Welcome!",
         style: homePageText2,
       ),
       const SizedBox(
