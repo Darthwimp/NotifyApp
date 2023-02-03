@@ -7,7 +7,7 @@ import 'package:my_app/screens/introScreens/splashScreen.dart';
 import 'constant/styles.dart';
 import 'sevices/auth_services.dart';
 
-void main(List<String> args) async {
+Future <void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
   runApp(const myApp());
@@ -37,7 +37,7 @@ class stream extends StatelessWidget {
       stream: Authservice().firebaseAuth.authStateChanges(),
       builder: (context, snapshot) {
         if (snapshot.hasData) {
-          return const home_page();
+          return home_page();
         }
         return onBoarding();
       },

@@ -42,7 +42,7 @@ class subAdd extends StatelessWidget {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => subInputPage(),
+                            builder: (context) => subInputPage(index: index),
                           ),
                         );
                       },

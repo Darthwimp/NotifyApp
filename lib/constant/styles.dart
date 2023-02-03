@@ -54,28 +54,30 @@ List<Color> tiles = [
   Colors.green
 ];
 
-Row homePageText = Row(
-  mainAxisAlignment: MainAxisAlignment.start,
-  children: [
-    const SizedBox(
-      width: 20,
-    ),
-    Text(
-      "Username!",
-      style: homePageText2,
-    ),
-    const SizedBox(
-      width: 130,
-    ),
-    IconButton(
-      icon: const Icon(
-        Icons.logout,
-        size: 40,
-        color: Colors.white,
+SafeArea homePageText = SafeArea(
+  child: Row(
+    mainAxisAlignment: MainAxisAlignment.start,
+    children: [
+      const SizedBox(
+        width: 20,
       ),
-      onPressed: () async {
-        await Authservice().signOut();
-      },
-    )
-  ],
+      Text(
+        "Username!",
+        style: homePageText2,
+      ),
+      const SizedBox(
+        width: 100,
+      ),
+      IconButton(
+        icon: const Icon(
+          Icons.logout,
+          size: 40,
+          color: Colors.white,
+        ),
+        onPressed: () async {
+          await Authservice().signOut();
+        },
+      )
+    ],
+  ),
 );
